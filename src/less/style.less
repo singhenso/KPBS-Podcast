@@ -1,0 +1,18 @@
+body {
+    --topBarHeight: 0 !important;
+    --navBarHeight: 0 !important;
+    padding-top: var(--headerHeight);
+    --persistentPlayerHeight: 0;
+    --headerHeight: calc(var(--topBarHeight) + var(--persistentPlayerHeight) + var(--navBarHeight));
+    padding: 0;
+}
+
+
+// Base style with buttons
+@import "src/less/global/base_buttons.less";
+
+// Modules
+@import "src/less/global/modules/video-hero.less"; // Vide-Hero
+@import "src/less/global/modules/video-hero-subpage.less"; // Vide-Hero-subpage
+
+@import "src/less/global/modules/video-list-grid.less"; // Vide-list-grid
