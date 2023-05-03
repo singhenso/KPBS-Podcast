@@ -3,27 +3,116 @@
 Podcast Hero
 =====================================================================
 */
-@import "src/less/global/base_buttons.less";
-
-
+@import 'src/less/global/base_buttons.less';
 
 .podcast-container-full {
-    max-width: 100%;
-    margin: 0 auto;
+  max-width: 100%;
+  margin: 0 auto;
 }
 
 .podcast-hero {
-    padding-right: 90px;
-    padding-left: 90px;
-
-        background-image: url(https://ww2.kqed.org/app/uploads/2022/05/Forum_background.png);
-
+  max-width: 100%;
+  width: 100%;
+  margin: 0 auto;
+  &-top {
+    // padding-bottom: 100px;
+    // background-image: url(https://cdn.kqed.org/wp-content/uploads/sites/77/2021/04/Rightnowish_desktopheader_2021_nologo.jpg);
+    // position: absolute;
+    // transition: opacity .5s ease;
+    // background-position: 50%;
+    // background-size: cover;
+    // opacity: 0;
+    // z-index: 2;
+    // top: 0;
+    // right: 0;
+    // bottom: 0;
+    // left: 0;
+    padding: 15vh 0 15vh 0;
+    background-color: Deepskyblue;
+    background-image: url(/img/cover.jpg);
+    background-size: cover;
+    background-position: center;
+    color: #fff;
+    width: 100%;
+    max-height: 500px;
+    .max-width-mixin(@tablet; {
+        padding: 5vh 0;
+    });
     &-logo {
-        width: 66.0153%;
-        float: left;
-        margin-left: 16.99235%;
-        margin-right: -100%;
-        padding-bottom: 128px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding-bottom: 128px;
+      max-width: 500px;
+      margin: 0 auto;
+      .max-width-mixin(@tablet; {
+        padding-bottom: 80px;
+        max-width: 300px;
+    });
     }
-}
+  }
 
+  &-content {
+    padding: 0 20px;
+    &-blurb {
+      position: relative;
+      border-top: 3px solid #ee9f3f;
+      background-color: #fff;
+      z-index: 2;
+      border-color: #ee9f3f;
+      width: 66.0153%;
+      margin-left: 16.99235%;
+      margin-right: -100%;
+      top: -80px;
+      margin-bottom: -80px;
+      padding: 18px 24px;
+      border-width: 5px;
+      font-size: 17px;
+      grid-gap: 30px;
+      line-height: 28px;
+      display: grid;
+      grid-template-columns: 1fr 4fr;
+      background: #ffffff;
+      box-shadow: 0 23px 40px 0 rgba(0, 0, 0, 0.06);
+      border-radius: 6px;
+      .max-width-mixin(@tablet; {
+        padding-bottom: 80px;
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+    });
+      .max-width-mixin(@mobile; {
+        grid-template-columns: 1fr;
+    });
+      &-cover {
+        img {
+          max-width: 240px;
+        }
+      }
+      &-text {
+        p {
+          margin-top: 0;
+        }
+      }
+    }
+  }
+  &-title {
+    text-align: center;
+    h2 {
+      font-weight: 600;
+      font-size: 35px;
+      letter-spacing: 0.8px;
+      line-height: 1.28571;
+      text-align: center;
+      margin: 20px 0;
+      &:before {
+        display: block;
+        width: 50%;
+        height: 37px;
+        margin-bottom: 2px;
+        border-right: 1px solid currentColor;
+        content: ' ';
+      }
+    }
+  }
+}
