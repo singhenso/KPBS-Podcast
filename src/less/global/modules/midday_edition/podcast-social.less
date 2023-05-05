@@ -1,0 +1,43 @@
+/*
+=====================================================================
+Podcast Hero
+=====================================================================
+*/
+@import 'src/less/global/base_buttons.less';
+.podcast-socialshare {
+    background-image: linear-gradient(79deg, #FFC796 0%, #FF6B95 100%);
+    width: 100%;
+    padding: 60px;
+    color: #fff;
+    text-align: center;
+    font-family: "Roboto";
+    &-container {
+        max-width: 1240px;
+        h2 {
+            margin-bottom: 30px;
+        }
+        ul {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            gap: 30px;
+            max-width: 800px;
+            margin: 0 auto;
+            .max-width-mixin(@tablet; {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+            });
+            li a {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                svg {
+                    margin-bottom: 20px;
+                }
+            }
+        }
+    }
+
+}

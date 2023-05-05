@@ -61,8 +61,7 @@ Podcast Hero
       z-index: 2;
       border-color: #ee9f3f;
       width: 66.0153%;
-      margin-left: 16.99235%;
-      margin-right: -100%;
+      margin: 0 auto;
       top: -80px;
       margin-bottom: -80px;
       padding: 18px 24px;
@@ -70,26 +69,42 @@ Podcast Hero
       font-size: 17px;
       grid-gap: 30px;
       line-height: 28px;
-      display: grid;
-      grid-template-columns: 1fr 4fr;
+      display: flex;
+      flex-direction: row;
       background: #ffffff;
       box-shadow: 0 23px 40px 0 rgba(0, 0, 0, 0.06);
       border-radius: 6px;
       .max-width-mixin(@tablet; {
-        padding-bottom: 80px;
         width: 100%;
         margin-left: auto;
         margin-right: auto;
-    });
+        });
       .max-width-mixin(@mobile; {
         grid-template-columns: 1fr;
-    });
+        });
       &-cover {
         img {
           max-width: 240px;
         }
       }
       &-text {
+        h3 {
+            margin-bottom: 15px;
+        }
+        ul {
+            display: flex;
+            gap: 10px;
+            .max-width-mixin(@tablet; {
+                flex-direction: column;
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                gap: 0;
+                grid-gap: 20px;
+                });
+            li {
+
+            }
+        }
         p {
           margin-top: 0;
         }

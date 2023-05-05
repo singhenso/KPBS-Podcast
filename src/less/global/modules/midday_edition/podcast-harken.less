@@ -1,0 +1,53 @@
+/*
+=====================================================================
+Podcast Harken
+=====================================================================
+*/
+@import 'src/less/global/base_buttons.less';
+
+.podcast-harken {
+  background-color: #fafafa;
+  padding: 60px 20px;
+  font-size: 16px;
+  &-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background-color: #fff;
+    max-width: @content-width;
+    margin: 0 auto;
+    padding: 30px 20px;
+    border-radius: 6px;
+    grid-gap: 30px;
+    .max-width-mixin(@tablet; {
+        grid-template-columns: 1fr;
+        grid-gap: @grid-gap;
+    });
+  }
+  &-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    h3 {
+        font-size: 28px;
+    }
+    ul {
+      padding: 15px 0;
+
+      li {
+        margin-bottom: 15px;
+        display: flex;
+        svg {
+            margin-right: 5px;
+            height: 10px;
+            top: 4px;
+            position: relative;
+            width: 40px;
+        }
+      }
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+}

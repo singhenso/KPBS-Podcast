@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Video Redesign Static Page</title>
+    <title>Podcasting Page</title>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap">
     <!-- original KPBS CSS from site -->
     <link rel="stylesheet" href="@@webRoot/css/style.css">
@@ -20,7 +20,19 @@
             podcast-hero.html:
             data-less-file="podcast-hero.less"
         -->
-    @@include('src/blocks/podcast-hero.html')
+    @@include('src/blocks/midday_edition/podcast-hero.html')
+    <!--
+            podcast-social.html:
+            data-less-file="podcast-social.less"
+        -->
+    @@include('src/blocks/midday_edition/podcast-social.html')
+    <!--
+            podcast-harken.html:
+            data-less-file="podcast-harken.less"
+        -->
+    @@include('src/blocks/midday_edition/podcast-harken.html')
+
+    <!-- <p data-hkn-embed-id="10652">_</p><script async data-hkn-plchldr src="https://modules.wearehearken.com/kpbs/embed/10652.js">_</script> -->
 
 
     <script src="https://unpkg.com/flickity@2.2.2/dist/flickity.pkgd.min.js"></script>
