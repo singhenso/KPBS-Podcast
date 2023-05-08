@@ -9,6 +9,10 @@ Podcast Harken
   background-color: #fafafa;
   padding: 60px 20px;
   font-size: 16px;
+  .max-width-mixin(@mobile; {
+    background-color: #fff;
+
+});
   &-container {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -21,12 +25,19 @@ Podcast Harken
     .max-width-mixin(@tablet; {
         grid-template-columns: 1fr;
         grid-gap: @grid-gap;
+        padding: 0;
+        grid-gap: 20px;
     });
   }
   &-content {
     display: flex;
     justify-content: center;
     align-items: center;
+    img {
+        max-width: 100%;
+        margin: 0 auto;
+        border-radius: 6px;
+    }
     h3 {
         font-size: 28px;
     }

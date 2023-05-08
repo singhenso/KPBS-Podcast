@@ -37,7 +37,7 @@ function compileStyles() {
 }
 
 function compileModules() {
-  return gulp.src('src/less/global/modules/*.less')
+  return gulp.src('src/less/global/modules/**/*.less')
     .pipe(sourcemaps.init())
     .pipe(less())
     .pipe(autoprefixer())
