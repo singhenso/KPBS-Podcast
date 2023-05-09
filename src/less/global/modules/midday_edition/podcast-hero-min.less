@@ -21,10 +21,10 @@ Podcast Hero
     background-position: center;
     color: #fff;
     width: 100%;
-    max-height: 280px;
+    max-height: 200px;
     background: #00c08f;
     content: "";
-    height: 280px;
+    height: 200px;
     left: 0;
     top: 0;
     transition: height calc(var(--transition-duration)*2);
@@ -38,15 +38,15 @@ Podcast Hero
         border-radius: 0 0 100% 100%;
         content: "";
         filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#00ffffff",endColorstr="#75ffffff",GradientType=0);
-        height: 700px;
-        left: -6%;
+        height: 600px;
+        // left: -6%;
         margin: auto;
         position: absolute;
         right: 0;
-        top: -448px;
+        top: -220px;
         transition: height calc(var(--transition-duration)*2),top calc(var(--transition-duration)*2);
         -webkit-transition: height calc(var(--transition-duration)*2),top calc(var(--transition-duration)*2);
-        width: 112%;
+        width: 100%;
         background: linear-gradient(180deg,#02c65e 40%,#cff2e9);
         filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#f5b80c",endColorstr="#f2dada",GradientType=0);
     }
@@ -101,12 +101,19 @@ Podcast Hero
         });
       &-cover {
         img {
-          max-width: 240px;
+            border-radius: 6px;
+            min-width: 180px;
+            width: 100%;
           border-radius: 6px;
           .max-width-mixin(@mobile; {
             width: 100%;
             max-width: 500px;
             });
+            @media only screen and (max-device-width: 825px) {
+                /* CSS rules for screens up to 375px (iPhone 14 Pro, XS, etc.) */
+                max-width: 600px;
+                width: 100%;
+              }
         }
       }
       &-text {
