@@ -19,12 +19,12 @@ Podcast Promo Podcasts
     h2 {
       font-weight: 600;
       font-size: 35px;
-      letter-spacing: 0.8px;
       line-height: 1.28571;
       text-align: center;
       margin: 20px 0;
       .max-width-mixin(@tablet; {
         margin: 0;
+        font-size: 24px;
       });
       &:before {
         display: block;
@@ -41,6 +41,7 @@ Podcast Promo Podcasts
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-gap: 20px;
     padding: 30px 0;
+    // save
     .max-width-mixin(@tablet; {
         grid-template-columns: 1fr 1fr;
     });

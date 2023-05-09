@@ -16,26 +16,40 @@ Podcast Hero
   font-family: 'Roboto';
   margin: 0 auto;
   &-top {
-    // padding-bottom: 100px;
-    // background-image: url(https://cdn.kqed.org/wp-content/uploads/sites/77/2021/04/Rightnowish_desktopheader_2021_nologo.jpg);
-    // position: absolute;
-    // transition: opacity .5s ease;
-    // background-position: 50%;
-    // background-size: cover;
-    // opacity: 0;
-    // z-index: 2;
-    // top: 0;
-    // right: 0;
-    // bottom: 0;
-    // left: 0;
-    padding: 15vh 0 15vh 0;
-    background-color: Deepskyblue;
-    background-image: url(https://kpbs-brightspot-lower.s3.amazonaws.com/fc/a5/a8661fb74f60930279346eb74eb0/placeholder-banner.jpg);
+    padding: 100px 0;
     background-size: cover;
     background-position: center;
     color: #fff;
     width: 100%;
-    max-height: 500px;
+    max-height: 280px;
+    background: #00c08f;
+    content: "";
+    height: 280px;
+    left: 0;
+    top: 0;
+    transition: height calc(var(--transition-duration)*2);
+    -webkit-transition: height calc(var(--transition-duration)*2);
+    width: 100%;
+    .max-width-mixin(@tablet; {
+        max-height: 130px;
+    });
+    &:after {
+        background: linear-gradient(180deg,hsla(0,0%,100%,0) 68%,hsla(0,0%,100%,.46));
+        border-radius: 0 0 100% 100%;
+        content: "";
+        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#00ffffff",endColorstr="#75ffffff",GradientType=0);
+        height: 700px;
+        left: -6%;
+        margin: auto;
+        position: absolute;
+        right: 0;
+        top: -448px;
+        transition: height calc(var(--transition-duration)*2),top calc(var(--transition-duration)*2);
+        -webkit-transition: height calc(var(--transition-duration)*2),top calc(var(--transition-duration)*2);
+        width: 112%;
+        background: linear-gradient(180deg,#02c65e 40%,#cff2e9);
+        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#f5b80c",endColorstr="#f2dada",GradientType=0);
+    }
     .max-width-mixin(@tablet; {
         padding: 5vh 0;
     });
@@ -63,8 +77,8 @@ Podcast Hero
       border-color: #00b15a;
       width: 66.0153%;
       margin: 0 auto;
-      top: -80px;
-      margin-bottom: -80px;
+      top: -120px;
+      margin-bottom: -120px;
       padding: 18px 24px;
       border-width: 5px;
       font-size: 17px;
